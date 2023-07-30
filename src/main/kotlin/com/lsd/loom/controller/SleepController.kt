@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
 /**
- * CYou can make requests to this controller
+ * You can make requests to this controller
  * for a comparison between platform threads and virtual threads.
  */
 @RestController
