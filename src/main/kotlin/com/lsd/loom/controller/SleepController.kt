@@ -18,8 +18,7 @@ class SleepController(
         @RequestBody request: SleepRequest,
     ): SleepResponse {
         return sleeper.sleepByPlatformThreads(request.threadCount)
-            .inWholeMilliseconds
-            .let(::SleepResponse)
+            .let(SleepResponse::from)
     }
 
     @PostMapping("/api/sleep-by-virtual-threads")
@@ -27,7 +26,6 @@ class SleepController(
         @RequestBody request: SleepRequest,
     ): SleepResponse {
         return sleeper.sleepByVirtualThreads(request.threadCount)
-            .inWholeMilliseconds
-            .let(::SleepResponse)
+            .let(SleepResponse::from)
     }
 }
