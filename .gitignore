@@ -65,3 +65,5 @@ crashlytics-build.properties
 
 # log file
 /tossbank/
+
+.DS_Store
