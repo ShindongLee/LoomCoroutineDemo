@@ -6,8 +6,8 @@ This demo provides test API endpoints for comparing virtual threads with platfor
 # Usage
 
 ```bash
-curl -iL -XPOST localhost:8080/api/sleep-by-platform-threads -H "Content-Type: application/json" -d '{"sleepCount": 100000}'
-curl -iL -XPOST localhost:8080/api/sleep-by-virtual-threads -H "Content-Type: application/json" -d '{"sleepCount": 100000}'
+curl -iL -XPOST localhost:8080/api/sleep-by-platform-threads -H "Content-Type: application/json" -d '{"threadCount": 100000}'
+curl -iL -XPOST localhost:8080/api/sleep-by-virtual-threads -H "Content-Type: application/json" -d '{"threadCount": 100000}'
 curl -iL -XPOST localhost:8080/api/sleep-by-io-dispatcher -H "Content-Type: application/json" -d '{"sleepCount": 100000, "isBlocking": true}'
 curl -iL -XPOST localhost:8080/api/sleep-by-loom-dispatcher -H "Content-Type: application/json" -d '{"sleepCount": 100000, "isBlocking": true}'
 ```

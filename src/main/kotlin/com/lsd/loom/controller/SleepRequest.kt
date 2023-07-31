@@ -1,7 +1,7 @@
 package com.lsd.loom.controller
 
 data class SleepRequest(
-    val sleepCount: Int,
+    val threadCount: Int,
 )
 
 data class DispatcherSleepRequest(

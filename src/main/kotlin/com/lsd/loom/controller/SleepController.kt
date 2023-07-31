@@ -20,7 +20,7 @@ class SleepController(
     fun sleepByPlatformThreads(
         @RequestBody request: SleepRequest,
     ): SleepResponse {
-        return threadSleeper.sleepByPlatformThreads(request.sleepCount)
+        return threadSleeper.sleepByPlatformThreads(request.threadCount)
             .let(SleepResponse::from)
     }
 
@@ -28,7 +28,7 @@ class SleepController(
     fun sleepByVirtualThreads(
         @RequestBody request: SleepRequest,
     ): SleepResponse {
-        return threadSleeper.sleepByVirtualThreads(request.sleepCount)
+        return threadSleeper.sleepByVirtualThreads(request.threadCount)
             .let(SleepResponse::from)
     }
 
